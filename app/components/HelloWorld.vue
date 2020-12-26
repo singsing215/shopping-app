@@ -22,8 +22,8 @@
                         <Image src="res://search"></Image>
                     </TabStripItem>
                 </TabStrip>
+                <!-- Ladies-->
                 <TabContentItem>
-
                     <ListView for="product in ladies" @itemTap="onItemTap">
                         <v-template>
                             <StackLayout orientation="vertical" height="300">
@@ -33,10 +33,9 @@
                             </StackLayout>
                         </v-template>
                     </ListView>
-
                 </TabContentItem>
+                <!-- Gents -->
                 <TabContentItem>
-
                     <ListView for="product in gents" @itemTap="onItemTap">
                         <v-template>
                             <StackLayout orientation="vertical" height="300">
@@ -46,13 +45,11 @@
                             </StackLayout>
                         </v-template>
                     </ListView>
-
                 </TabContentItem>
+                <!-- My Cart -->
                 <TabContentItem>
-
                     <StackLayout orientation="vertical" margin="10">
                         <Label text="My Shopping Cart" class="h2" />
-
                         <ListView for="product in inCart" @itemTap="onItemTap"
                             height="300">
                             <v-template>
@@ -65,13 +62,11 @@
                                 </FlexboxLayout>
                             </v-template>
                         </ListView>
-
                         <Label :text="'Total: $' + total" class="h2" />
                     </StackLayout>
-
                 </TabContentItem>
+                <!-- Figures -->
                 <TabContentItem>
-
                     <GridLayout rows="*" height="1000px">
                         <RadCartesianChart row="0" style="font-size: 12;">
                             <BarSeries v-tkCartesianSeries
@@ -82,8 +77,8 @@
                             <LinearAxis v-tkCartesianVerticalAxis />
                         </RadCartesianChart>
                     </GridLayout>
-
                 </TabContentItem>
+
             </BottomNavigation>
         </StackLayout>
     </Page>
